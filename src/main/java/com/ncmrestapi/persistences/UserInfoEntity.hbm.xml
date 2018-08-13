@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.ncmrestapi.persistences.UserInfoEntity" table="user_info" schema="public" catalog="ncm">
+        <id name="id">
+            <column name="id" sql-type="integer"/>
+        </id>
+        <property name="firstName">
+            <column name="first_name" sql-type="varchar(255)"/>
+        </property>
+        <property name="lastName">
+            <column name="last_name" sql-type="varchar(255)"/>
+        </property>
+        <property name="birthdayDate">
+            <column name="birthday_date" sql-type="date"/>
+        </property>
+        <property name="phone">
+            <column name="phone" sql-type="varchar(10)" length="10"/>
+        </property>
+        <property name="email">
+            <column name="email" sql-type="varchar(255)"/>
+        </property>
+        <property name="roleId">
+            <column name="role_id" sql-type="integer"/>
+        </property>
+        <many-to-one name="rolesByRoleId" class="com.ncmrestapi.persistences.RolesEntity">
+            <column name="role_id"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>
