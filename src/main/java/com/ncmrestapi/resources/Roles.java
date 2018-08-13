@@ -1,6 +1,6 @@
 package com.ncmrestapi.resources;
 
-import com.ncmrestapi.persistences.RolesEntity;
+import com.ncmrestapi.persistences.RoleEntity;
 import com.ncmrestapi.utils.HibernateUtil;
 import org.hibernate.Session;
 import javax.ws.rs.GET;
@@ -30,10 +30,10 @@ public class Roles {
 
         session.beginTransaction();
 
-        List<RolesEntity> roles = session.createQuery("from RolesEntity ").getResultList();
+        List<RoleEntity> roles = session.createQuery("from RolesEntity ").getResultList();
         session.getTransaction().commit();
 
-        GenericEntity<List<RolesEntity>> generic = new GenericEntity< List< RolesEntity > >( roles ) { };
+        GenericEntity<List<RoleEntity>> generic = new GenericEntity< List<RoleEntity> >( roles ) { };
         return Response.ok( generic ).build();
     }
 
@@ -44,10 +44,10 @@ public class Roles {
 
         session.beginTransaction();
 
-        RolesEntity role = session.createQuery("from RolesEntity R where R.id = id ").getSingleResult();
+        RoleEntity role = session.createQuery("from RoleEntity R where R.id = id ").getSingleResult();
         session.getTransaction().commit();
 
-        GenericEntity<List<RolesEntity>> genericRoles = new GenericEntity<List<RolesEntity>>(roles) {};
+        GenericEntity<List<RoleEntity>> genericRoles = new GenericEntity<List<RoleEntity>>(roles) {};
         return Response.ok(genericRoles).build();
     }*/
 }

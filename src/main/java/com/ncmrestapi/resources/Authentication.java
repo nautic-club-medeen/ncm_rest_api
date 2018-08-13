@@ -1,5 +1,6 @@
 package com.ncmrestapi.resources;
 
+import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.ncmrestapi.persistences.UserInfoEntity;
 import com.ncmrestapi.utils.HibernateUtil;
 import org.hibernate.HibernateException;

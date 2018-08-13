@@ -1,6 +1,6 @@
 package com.ncmrestapi.utils;
 
-import com.ncmrestapi.persistences.RolesEntity;
+import com.ncmrestapi.persistences.RoleEntity;
 import com.ncmrestapi.persistences.UserInfoEntity;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -15,7 +15,7 @@ public class HibernateUtil {
         try {
             Configuration configuration = new Configuration();
             configuration.configure("hibernate.cfg.xml");
-            configuration.addAnnotatedClass(RolesEntity.class);
+            configuration.addAnnotatedClass(RoleEntity.class);
             configuration.addAnnotatedClass(UserInfoEntity.class);
 
             ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();

@@ -14,8 +14,8 @@
         <!-- DB schema will be updated if needed -->
         <property name="hbm2ddl.auto">update</property>
 
-        <mapping resource="com/ncmrestapi/persistences/RolesEntity.hbm.xml"/>
-        <mapping class="com.ncmrestapi.persistences.RolesEntity"/>
+        <mapping resource="com/ncmrestapi/persistences/RoleEntity.hbm.xml"/>
+        <mapping class="com.ncmrestapi.persistences.RoleEntity"/>
         <mapping resource="com/ncmrestapi/persistences/UserInfoEntity.hbm.xml"/>
         <mapping class="com.ncmrestapi.persistences.UserInfoEntity"/>
 

@@ -1,12 +1,11 @@
 package com.ncmrestapi.persistences;
 
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.Objects;
 
 @Entity
-@Table(name = "roles", schema = "public", catalog = "ncm")
-public class RolesEntity {
+@Table(name = "role", schema = "public", catalog = "ncm")
+public class RoleEntity {
     private String name;
     private int id;
 
@@ -34,7 +33,7 @@ public class RolesEntity {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        RolesEntity that = (RolesEntity) o;
+        RoleEntity that = (RoleEntity) o;
         return id == that.id &&
                 Objects.equals(name, that.name);
     }

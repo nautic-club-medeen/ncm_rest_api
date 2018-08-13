@@ -26,7 +26,7 @@
         <property name="roleId">
             <column name="role_id" sql-type="integer"/>
         </property>
-        <many-to-one name="rolesByRoleId" class="com.ncmrestapi.persistences.RolesEntity">
+        <many-to-one name="rolesByRoleId" class="com.ncmrestapi.persistences.RoleEntity">
             <column name="role_id"/>
         </many-to-one>
     </class>

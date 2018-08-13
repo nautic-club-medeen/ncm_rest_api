@@ -14,7 +14,7 @@ public class UserInfoEntity {
     private String phone;
     private String email;
     private int roleId;
-    private RolesEntity rolesByRoleId;
+    private RoleEntity rolesByRoleId;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -107,11 +107,11 @@ public class UserInfoEntity {
 
     @ManyToOne
     @JoinColumn(name = "role_id", referencedColumnName = "id", nullable = false)
-    public RolesEntity getRolesByRoleId() {
+    public RoleEntity getRolesByRoleId() {
         return rolesByRoleId;
     }
 
-    public void setRolesByRoleId(RolesEntity rolesByRoleId) {
+    public void setRolesByRoleId(RoleEntity rolesByRoleId) {
         this.rolesByRoleId = rolesByRoleId;
     }
 }

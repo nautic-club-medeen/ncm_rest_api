@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="com.ncmrestapi.persistences.RolesEntity" table="roles" schema="public" catalog="ncm">
+    <class name="com.ncmrestapi.persistences.RoleEntity" table="role" schema="public" catalog="ncm">
         <id name="id">
             <column name="id" sql-type="integer"/>
         </id>
